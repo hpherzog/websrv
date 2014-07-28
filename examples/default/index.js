@@ -1,10 +1,5 @@
-websrv
-======
 
-node.js web server based on express and ws
-
-```js
-var websrv = require("websrv");
+var websrv = require("../..");
 
 var cwd = process.cwd();
 
@@ -23,4 +18,3 @@ srv.vhost('test1.tld', function(vhost){
 });
 
 srv.start();
-```
