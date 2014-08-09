@@ -10,11 +10,4 @@ var srv = new websrv.Server({
     sslCertPath: cwd + '/ssl/test.crt'
 });
 
-srv.vhost('test1.tld', function(vhost){
-
-    vhost.app.get('/', function(req, res){
-        res.render('index');
-    });
-});
-
 srv.start();
