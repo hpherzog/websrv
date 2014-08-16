@@ -13,8 +13,24 @@ var srv = new websrv.Server({
     viewPath: './views'
 });
 
-srv.app.get('/', function(req, res) {
-    res.render('index');
+
+
+srv.control(function(app){
+
+    app.all('/', function(req, res) {
+        res.render('index');
+    });
+});
+
+srv.on('started', function() {
+
+    srv.wss.on('opened', function(socket){
+
+    });
+
+    srv.wss.on('closed', function(socket){
+
+    });
 });
 
 srv.start();
