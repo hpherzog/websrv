@@ -1,6 +1,6 @@
 
 var client = new websrv.Client({
-    url: 'wss://test1.tld:8433'
+    url: 'wss://websrv:8433'
 });
 
 client.on('online', function() {

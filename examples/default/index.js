@@ -15,20 +15,16 @@ var srv = new websrv.Server({
 
 
 
-srv.control(function(app){
+srv.routes(function(routes){
 
-    app.all('/', function(req, res) {
+    routes.all('/', function(req, res) {
         res.render('index');
     });
 });
 
-srv.on('started', function() {
+srv.sockets(function(sockets){
 
-    srv.wss.on('opened', function(socket){
-
-    });
-
-    srv.wss.on('closed', function(socket){
+    sockets.on('opened', function(socket){
 
     });
 });
