@@ -9,9 +9,8 @@ var srv = new websrv.Server({
     sslKeyPath: cwd + '/ssl/websrv.key',
     sslCertPath: cwd + '/ssl/websrv.crt',
     cookieSecret: '14fff00895822c08013d750a41c8f024',
-    viewEngine: 'ejs'
+    viewEngine: 'jade'
 });
-
 
 
 srv.routes(function(routes){
@@ -24,7 +23,11 @@ srv.routes(function(routes){
 srv.sockets(function(sockets){
 
     sockets.on('opened', function(socket){
+        console.log('OPENED');
+    });
 
+    sockets.on('closed', function(socket){
+        console.log('CLOSED');
     });
 });
 
