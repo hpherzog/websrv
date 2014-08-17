@@ -1,7 +1,7 @@
 websrv
 ======
 
-node.js web server based on express and ws
+websrv is built on top of the well known npm modules express and ws. You can build a test or playground environment very fast. 
 
 ```js
 var websrv = require("websrv");
