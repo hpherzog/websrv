@@ -12,8 +12,7 @@
   },
   "keywords": [
     "webserver",
-    "websocket",
-    "vhost"
+    "websocket"
   ],
   "author": "Hans-Peter Herzog <hans-peter.herzog@cdn-hph.de>",
   "license": "MIT",
