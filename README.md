@@ -20,8 +20,6 @@ var srv = new websrv.Server({
     cookieSecret: '***',
     viewEngine: 'jade'
 });
-
-srv.start();
 ```
 
 Define Routes
@@ -30,8 +28,12 @@ Define Routes
 ```js
 srv.routes(function(routes){
 
-    routes.all('/', function(req, res) {
-        res.render('index');
+    routes.get('/users', function(req, res) {
+        res.render('users/list');
+    });
+    
+    routes.post('/users', function(req, res) {
+        res.render('users/add');
     });
 });
 ```
