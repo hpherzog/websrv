@@ -1,10 +1,10 @@
-websrv - real-time web playground
+webSrv - real-time web playground
 =================================
 
-You can build a web and websocket test environment very fast.
-websrv is built on top of the well known npm modules express and ws.
+You can build a web and WebSocket test environment very fast.
+webSrv is built on top of the well known npm modules express and ws.
 
-Set up server
+Set up Server
 -------------
 
 ```js
@@ -24,7 +24,7 @@ var srv = new websrv.Server({
 srv.start();
 ```
 
-Define routes
+Define Routes
 -------------
 
 ```js
@@ -52,3 +52,8 @@ srv.sockets(function(sockets){
 });
 ```
 
+Start Server
+------------
+```js
+srv.start();
+```
